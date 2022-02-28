@@ -19,7 +19,7 @@ const Space = ({searchData}) => {
   })
 
   const filterItem = items.filter(item => (
-      item.title.toLowerCase().includes(searchData.toLowerCase())
+      (item.title.toLowerCase(), item.lang.toLowerCase()).includes(searchData.toLowerCase())
   ))
 
   return (
