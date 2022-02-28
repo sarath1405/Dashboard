@@ -15,7 +15,9 @@ import {
 } from 'react-router-dom';
 
 function App() {
+  
   const [data, setData] = useState('')
+
   return (
     <div className="App">
       <Router>
@@ -27,7 +29,7 @@ function App() {
           <Route path="/home" element={<Space searchData={data}/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/new" element={<New/>}></Route>
-          <Route path="/delete" element={<Delete/>}></Route>
+          <Route path="/delete" element={<Delete searchData={data}/>} ></Route>
           <Route path="/item" element={<Box1/>}></Route>
         </Routes>
         </div>

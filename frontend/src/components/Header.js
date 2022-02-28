@@ -5,7 +5,7 @@ const Header = (props) => {
   return (
     <div>
         <div className='container1'>
-            <div className="header">
+            <div className="header1">
                 <h2 className="head">Dashboard</h2>
                 <div className="searchbar">
                     <input type="search" placeholder='search project' onChange={(e) => props.search(e.target.value)}/>

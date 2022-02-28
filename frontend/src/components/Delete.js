@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import Box1 from './Box1'
+import Itemdelete from './Itemdelete'
+import Loader from './Loader'
 
-const Delete = () => {
-
-  const [Item, setItem] = useState([
+const Space = ({searchData}) => {
+  const [items, setItems] = useState([
   ]);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     fetch("https://dashboard07.herokuapp.com/delete").then(res => {
@@ -12,18 +13,20 @@ const Delete = () => {
         return res.json();
       }
     }).then(jsonRes => {
-      setItem(jsonRes)
+      setItems(jsonRes)
+      setShow(true);
     });
   })
 
+  const filterItem = items.filter(item => (
+      item.title.toLowerCase().includes(searchData.toLowerCase())
+  ))
+
   return (
-    <div className='space'>
-        {
-          Item.map((item, index) => {
-            return <Box1 key={index} title={item.title} matter={item.matter} lang={item.lang} link={item.link} github={item.github} id={item._id}/>
-        })}
-    </div>
+    <>
+    {show ? <Itemdelete item1={filterItem}/> : <Loader/>}
+    </>
   )
 }
 
-export default Delete
+export default Space

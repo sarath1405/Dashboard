@@ -85,9 +85,45 @@
     background: rgb(256,256,256); 
 }
 
+.loader {
+    height: calc(100% - 12vh);
+    width: auto;
+    margin-top: 12vh;
+    background: transparent;
+    border: 1px solid #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EEE;
+    font-weight: bold;
+}
+
+.loader div {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    border-top-color: #EEE;
+    border-radius: 100px;
+    animation: spin 1.5s infinite linear;  
+}
+
+@keyframes spin {
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
 @media (max-width:1080px) {
     .space {
         grid-template-columns: 50% 50%;
+    }
+    .loader {
+        height: calc(100% - 17vh);
+        width: auto;
+        margin-top: 17vh;
+        background: transparent;
+        border: 1px solid #EEE;
     }
 }
 
@@ -95,5 +131,12 @@
     .space {
         grid-template-columns: 100%;
         overflow: hidden;
+    }
+    .loader {
+        height: calc(100% - 17vh);
+        width: auto;
+        margin-top: 17vh;
+        background: transparent;
+        border: 1px solid #EEE;
     }
 }

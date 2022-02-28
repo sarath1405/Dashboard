@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Item from './Item'
+import Loader from './Loader'
 
 const Space = ({searchData}) => {
   const [items, setItems] = useState([
   ]);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     fetch("https://dashboard07.herokuapp.com/home").then(res => {
@@ -12,6 +14,7 @@ const Space = ({searchData}) => {
       }
     }).then(jsonRes => {
       setItems(jsonRes)
+      setShow(true);
     });
   })
 
@@ -20,7 +23,9 @@ const Space = ({searchData}) => {
   ))
 
   return (
-    <Item item1={filterItem}/>
+    <>
+    {show ? <Item item1={filterItem}/> : <Loader/>}
+    </>
   )
 }
 
