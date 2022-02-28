@@ -6,7 +6,7 @@ const Space = ({searchData}) => {
   ]);
 
   useEffect(() => {
-    fetch("/home").then(res => {
+    fetch("https://dashboard07.herokuapp.com/home").then(res => {
       if(res.ok) {
         return res.json();
       }

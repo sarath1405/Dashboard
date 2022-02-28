@@ -34,7 +34,7 @@ const New = () => {
       github : input.github
     }
 
-    axios.post('http://localhost:3001/new', newItem);
+    axios.post('https://dashboard07.herokuapp.com/new', newItem);
     navigate('/home');
   }
   

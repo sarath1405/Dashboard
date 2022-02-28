@@ -7,7 +7,7 @@ const Profile = () => {
   ]);
 
   useEffect(() => {
-    fetch("/profile").then(res => {
+    fetch("https://dashboard07.herokuapp.com/profile").then(res => {
       if(res.ok) {
         return res.json();
       }

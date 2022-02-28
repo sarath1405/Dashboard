@@ -12,7 +12,7 @@ const Box1 = ({title, matter, lang, link, github, id}) => {
   const del = () => {
     if(window.confirm(`"${title}" will be deleted ?`)) {
       const item1 = {id};
-      axios.post('http://localhost:3001/item', item1);
+      axios.post('https://dashboard07.herokuapp.com/item', item1);
     }
   }
 

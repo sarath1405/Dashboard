@@ -7,7 +7,7 @@ const Delete = () => {
   ]);
 
   useEffect(() => {
-    fetch("/delete").then(res => {
+    fetch("https://dashboard07.herokuapp.com/delete").then(res => {
       if(res.ok) {
         return res.json();
       }
