@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PROT || 5000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect("mongodb+srv://sarath14:Gd0b6Vc5Awqkw1ev@cluster0.arzcw.mongodb.net/dashboardDB?retryWrites=true&w=majority").then(console.log('mongodb connected!'))
 .catch("error");
