@@ -90,7 +90,6 @@
     width: auto;
     margin-top: 12vh;
     background: transparent;
-    border: 1px solid #EEE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +122,6 @@
         width: auto;
         margin-top: 17vh;
         background: transparent;
-        border: 1px solid #EEE;
     }
 }
 
@@ -137,6 +135,5 @@
         width: auto;
         margin-top: 17vh;
         background: transparent;
-        border: 1px solid #EEE;
     }
 }
