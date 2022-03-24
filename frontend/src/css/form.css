@@ -76,6 +76,7 @@
     border-radius: 5px;
     background: rgb(238, 238, 238, 1);
     color: #222831;
+    border: 2px solid #EEE;
 }
 
 #form button:hover {
